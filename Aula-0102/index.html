@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Placeholder</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            border: none;
+            list-style: none;
+        }
+        .flex{display: flex;}
+        .flex-row {
+            display: flex;
+            flex-direction: row;
+        }
+
+        .flex-col {
+            display: flex;
+            flex-direction: column;
+        }
+
+        #decoration {
+            background-color: aquamarine;
+            border: 10px 0 10px 0;
+            border-bottom-color: #000;
+            border-top-color: #696969;
+            height: 3vh;
+            width: 100vw;
+        }
+        .nav-div{
+            border-width: 0.1vw;
+            border-color:#696969;
+            border-style: solid;
+            padding:0.1vw;
+            margin: 5vh 0 0.5vw 0;
+        }
+        .w-100{width: 100%;}
+        nav{width:10vw; font-size:1rem;}
+        main{width:85vw;}
+        .nav-div li a:hover, #nav-div-highlight{background-color: #696969; color:#fff}
+        .nav-div li a{width: 100%;}
+    </style>
+
+    <head>
+
+    <body class="flex-col">
+        <header class="flex-col">
+            <div>
+                <img src="https://uspdigital.usp.br/comumwebdev/imagens/cabecalho/usp-logo.png">
+                <img src="https://uspdigital.usp.br/comumwebdev/imagens/cabecalho/usp-logo-texto.png">
+            </div>
+            <hr/>
+        </header>
+        <div class="flex-row w-100vw">
+            <nav class="flex-col" id="nav">
+                <div class="flex w-100 nav-div">
+                    <ul class="flex-col w-100">
+                        <li id="nav-div-highlight">Público</li>
+                        <li><a>Calendário Escolar</a></li>
+                        <li><a>Curso de ingresso</a></li>
+                        <li><a>Disciplinas</a></li>
+                        <li><a>Editais</a></li>
+                        <li><a>FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="flex w-100 nav-div">
+                    <ul class="flex-col">
+                        <li id="nav-div-highlight">Acesso Restrito</li>
+                        <li><a>Entrar</a></li>
+                        <li><a>Esqueci a Senha</a></li>
+                        <li><a>Primeiro Acesso</a></li>
+                    </ul>
+                </div>
+            </nav>
+            <main class="flex-col">
+               
+
+            </main>
+        </div>
+    </body>
+
+</html>
