@@ -183,4 +183,4 @@ async def get_user(index : int | None = None):
 
 @app.delete("/users")
 async def delete_users():
-    user_list = []
+    user_list.clear()
