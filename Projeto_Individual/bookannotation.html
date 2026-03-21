@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Anotobolso - bookannotation</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="bookannotation.css" />
+</head>
+<body>
+  <div class="book flex flex-col align-center vw-100">
+    <img src="https://m.media-amazon.com/images/I/61DjjOWKvoL.jpg" class="size-p">
+    <div class="flex flex-row">
+      <h1>Book name</h1>
+
+      <button popovertarget="book-options" class="relative">Three dots menu
+        <div popover id="book-options">
+          <a>Delete book</a>
+          <a>Share annotations</a>
+          <a>Private annotations</a>
+        </div>
+
+      </button>
+    </div>
+    <div class="bookinfo flex flex-col w-full">
+      <input type="radio" id="book-summary" name="book-info-tab" checked="checked">
+      <input type="radio" id="book-data" name="book-info-tab">
+      <div class="flex flex-row justify-evenly w-fill">
+        <label for="book-summary">Summary</label>
+        <label for="book-data">Information</label>
+      </div>
+      <div id="summary-div" class="book-info-tab">
+        <p>Text about the book</p>
+      </div>
+      <div id="info-div" class="book-info-tab">
+
+          <div><b>ISBN:</b> 40028922</div>
+        <div><b>Gênero:</b> ação</div>
+      </div>
+
+    </div>
+  </div>
+  <div class="annotation flex flex-col">
+    <div class="annotation info flex flex-row justify-around align-center">
+      <span>Datetime</span>
+      <span>Likes</span>
+      <span>Public ou privado</span>
+      <button>Options (three dots)</button>
+    </div>
+    <div>
+       Page 40 is my favorite moment
+    </div>
+    <div>
+</body>
+
+</html>
