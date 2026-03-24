@@ -18,6 +18,9 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    z-index: 0;
+    text-decoration: none;
+    list-style: none;
 }
 input[type="checkbox"]{display:none;}
 input[type="radio"]{display:none;}
@@ -42,12 +45,10 @@ body {
 }
 
 .flex-col {
-    display: flex;
     flex-direction: column;
 }
 
 .flex-row {
-    display: flex;
     flex-direction: row;
 }
 
@@ -102,6 +103,89 @@ body {
 .w-full{
     width: 100%;
 }
+
+.w-80{
+    width: 80%;
+}
+
 .h-full{
     height: 100%;
+}
+
+.center{
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    text-align: center;
+    display: flex;
+    position: absolute;
+    z-index: -999px;
+    height: 100vh;
+    width: 100vw;
+}
+
+.three-dots{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 20px;
+    height: 20px;
+    max-width: 20px;
+    border-radius: 100px;
+}
+.three-dots:hover{
+    color: red;
+}
+
+
+input[type="checkbox"] + label:before {
+    content: "\1F5A4";
+    color:black;
+	transition:  .5s ease;
+}
+ 
+input[type="checkbox"]:checked + label:before {
+    content: '\1F49B';
+    font-size: 18px;
+	color: gold;
+}
+
+[popover]:popover-open {
+  position: relative;
+  display: flex;
+  inset: unset;
+}
+
+.menu{
+    height: fit-content;
+    align-items: center;
+    flex-direction: column;
+    margin-left: 10vw;
+}
+.menu > button{
+    width: 100%;
+}
+
+.card {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+    width: 320px;
+    padding: 24px;
+}
+
+.card h1 {
+    font-size: 1.4rem;
+    color: #2a3556;
+}
+
+.card button {
+    margin-top: 16px;
+    width: 100%;
+    padding: 10px;
+    border-radius: 6px;
+    background: #4f6eb4;
+    color: white;
+    font-size: 1rem;
 }

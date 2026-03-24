@@ -40,13 +40,19 @@
     display: flex;
 }
 
-[popover]:popover-open {
-  width: 200px;
-  height: 100px;
-  position: absolute;
-   display: flex;
-  flex-direction: column;
-  inset: unset;
-  margin: 0;
+#delete-confirmation{
+    z-index:2;
 }
 
+#book-data:checked ~ div label[for="book-data"]{
+    background-color: aqua;
+}
+#book-summary:checked ~ div label[for="book-summary"]{
+    background-color: aqua;
+}
+
+.annotation-text{
+    margin-top: 5vh;
+    text-align: left;
+    width: 100%;
+}

@@ -1,18 +1,5 @@
-.sign-card {
-    background: white;
-    border-radius: 10px;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
-    width: 320px;
-    padding: 24px;
-    display: flex;
-    flex-direction: column;
-}
-
-.sign-card h1 {
-    margin-top: 0;
-    font-size: 1.4rem;
-    color: #2a3556;
-    text-align: center;
+.sign-card button:hover {
+    background: #405699;
 }
 
 .sign-card label {
@@ -27,22 +14,9 @@
     padding: 10px;
     border: 1px solid #ced4da;
     border-radius: 6px;
-    font-size: 0.95rem;
+    font-size: 0.9rem;
 }
 
-.sign-card button {
-    margin-top: 16px;
-    width: 100%;
-    padding: 10px;
-    border-radius: 6px;
-    background: #4f6eb4;
-    color: white;
-    font-size: 1rem;
-}
-
-.sign-card button:hover {
-    background: #405699;
-}
 
 #sign-card-link {
     margin-top: 12px;
