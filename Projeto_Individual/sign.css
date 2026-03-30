@@ -1,18 +1,14 @@
-.sign-card button:hover {
-    background: #405699;
-}
-
 .sign-card label {
     display: block;
     margin: 10px 0 4px;
     font-size: 0.9rem;
-    color: #333;
+    color: var(--secondary-text);
 }
 
 .sign-card input {
     width: 100%;
     padding: 10px;
-    border: 1px solid #ced4da;
+    border: 1px solid var(--white);
     border-radius: 6px;
     font-size: 0.9rem;
 }
@@ -21,5 +17,11 @@
 #sign-card-link {
     margin-top: 12px;
     font-size: 0.85rem;
-    color: #555;
+    color:var(--text)
+}
+#sign-card-link a{
+    color: var(--accent);
+}
+#sign-card-link a:hover{
+    text-decoration: underline;
 }
