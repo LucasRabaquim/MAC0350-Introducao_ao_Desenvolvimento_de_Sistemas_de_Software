@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="light">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Anotobolso - bookannotation</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<link rel="stylesheet" href="../../static/global.css" />
+<link rel="stylesheet" href="../../static/post.css" /></head>
+
+<body>
+
+  <div class="card post flex-col">
+    <div class="flex flex-row justify-around align-center relative">
+      <span>Datetime</span>
+      <span>Username <span class="secondary-text">Useremail</span></span>
+      <span><input type="checkbox" id="heart" checked />
+        <label for="heart" /> : Num likes</span>
+      <span><input type="checkbox" id="visibility-setting" disabled />
+        <label for="visibility-setting"></label></span>
+      <div class="relative">
+        <button popovertarget="post-options" class="three-dots"><i class="fas fa-ellipsis-v"></i></button>
+        <div popover id="post-options" class="menu">
+          <button>Deletar</button>
+          <button>Share annotations</button>
+          <button>Private annotations</button>
+        </div>
+      </div>
+
+
+    </div>
+    <div class="post-text flex flex-col justify-center">
+      Page 40 is my favorite moment
+    </div>
+  </div>
+
+
+</body>
+
+</html>

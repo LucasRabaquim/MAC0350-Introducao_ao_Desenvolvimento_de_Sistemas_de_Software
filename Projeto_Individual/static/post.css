@@ -1,0 +1,27 @@
+.post{
+    width: 80vw;
+}
+
+.size-p{
+    width: 100vw;
+    height: 200px;
+    object-fit: cover;
+}
+
+.post-text{
+    margin-top: 5vh;
+    text-align: left;
+    width: 100%;
+}
+
+#visibility-setting + label:before {
+    content: "\f070 Privada";
+    font-family: "Font Awesome 5 Free";
+    color:var(--text);
+}
+#visibility-setting:checked + label:before {
+    content: "\f06e Pública";
+    font-family: "Font Awesome 5 Free" !important;
+    font-weight: 400 !important; 
+     color:var(--text);
+}
