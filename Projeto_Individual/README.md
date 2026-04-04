@@ -1,12 +1,8 @@
 # Anotobolso
 
-O Anotobolso é um sistema para criação de anotações sobre livros e compartilhamento com outros usuários:<br>
-Funcionalidades planejadas:<br>
-* Pesquisa por livros e criar anotações públicas e privadas
-* Seguir outros usuários
-* Salvar anotações favoritas feitas por outros usuários
-
-
-TODO: Explicar FastAPI e SQL model
-https://fastapi.tiangolo.com/tutorial/bigger-applications
-https://fastapi.tiangolo.com/tutorial/sql-databases
+O Anotobolso é um sistema para facilitar a criação anotações sobre livros de compartilhá-las:<br>
+Funcionalidades<br>
+* Criação, modificação e deleção de livros por parte do usuário
+* Criação, modificação e deleção de anotações em livros criados pelo usuário
+* Visualizar livros e anotações de outros usuários
+* Configuração de privacidade para livros e anotações

@@ -21,3 +21,6 @@
     font-weight: 400 !important; 
      color:var(--text);
 }
+#write-annotation{
+    font-size: 2rem;
+}

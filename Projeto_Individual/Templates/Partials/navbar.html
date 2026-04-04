@@ -4,37 +4,29 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Não é uma página</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-     <script src="https://cdn.jsdelivr.net/npm/htmx.org@2.0.8/dist/htmx.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/htmx.org@2.0.8/dist/htmx.min.js"></script>
     <link rel="stylesheet" href="../../static/global.css" />
     <link rel="stylesheet" href="../../static/navbar.css" />
 </head>
 
 <body>
     <nav class="vw-100 flex flex-row justify-between align-center navbar">
-        <a class="h-full"><img src="../../static/images/Anoto_LogoWhite2.png" class="logo"></a>
+        <a class="h-full"><img src="../../static/images/Anoto_LogoWhite2.png" class="logo" onclick="changeMode()"></a>
         <input type="checkbox" id="btn_hamburger">
         <label for="btn_hamburger" class="none">☰</label>
         <ul class="flex flex-row justify-around w-fit h-full navbar-links">
             <li class="w-fit">
                 <div class="search-bar justify-evenly">
-            
-                <input type="search" placeholder="Busque um usuário" 
-                hx-get="/users"
-                hx-trigger="input changed delay:500ms"
-                hx-target="#div-usuarios"
-                hx-select="#div-usuarios"
-                class="search-input"
-                id="search-user"
-                name="name"/>
-                <button type="submit" class="search-button"
-                onclick="searchUser()">
-                <i class="fa fa-search"></i></button>
-            </div>
+
+                    <input type="search" placeholder="Busque um usuário" hx-get="/users"
+                        hx-trigger="input changed delay:500ms" hx-target="#div-usuarios" hx-select="#div-usuarios"
+                        class="search-input" id="search-user" name="name" hx-indicator="#indicator">
+                    <button type="submit" class="search-button" onclick="searchUser()">
+                        <i class="fa fa-search"></i></button>
+                </div>
             </li>
             <li><a href="/books">Livros Salvos</a></li>
-            <!-- <li>Perfil</li> -->
             <li>{{ user.username }}</li>
             <li><a href="/logoff">Sair</a></li>
         </ul>
@@ -43,9 +35,26 @@
     {% endblock main %}
 </body>
 <script>
-    function searchUser(){
+    function searchUser() {
         const name = document.getElementById("search-user").value;
-        window.location.href = "/users?page=0&name="+name;
+        window.location.href = "/users?page=0&name=" + name;
     }
+    function changeMode() {
+        const page = document.querySelector("html");
+        const mode = page.dataset.theme;
+        if (mode == "light")
+            page.dataset.theme = "dark"
+        else
+            page.dataset.theme = "light"
+        localStorage.setItem('anotobolso_mode', page.dataset.theme);
+    }
+    if (!localStorage.getItem('anotobolso_mode'))
+        localStorage.setItem('anotobolso_mode', 'light');
+
+    document.addEventListener('DOMContentLoaded', () => {
+        const page = document.querySelector("html");
+        page.dataset.theme = localStorage.getItem('anotobolso_mode');
+    });
 </script>
+
 </html>

@@ -1,5 +1,5 @@
 <div id="book-options" class="menu">
-  <button hx-delete="/books/{{id}}" hx-target="#book-{{id}}" hx-swap="delete">Deletar</button>
+  <button hx-delete="/books/{{id}}" hx-target="#book-{{id}}" hx-swap="delete" hx-confirm="Deseja Apagar este livro?">Deletar</button>
   <button hx-get="/add_update_component/{{id}}" hx-target=".overlay">
     Editar</button>
 </div>

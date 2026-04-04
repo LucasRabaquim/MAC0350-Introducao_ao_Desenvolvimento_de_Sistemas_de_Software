@@ -321,3 +321,10 @@ textarea {
     left: 50%;
     transform: translate(-50%, -50%);
 }
+#indicator{
+    width: 15vh;
+    height: 15vh;
+}
+#indicator path{
+    fill:var(--accent);
+}
