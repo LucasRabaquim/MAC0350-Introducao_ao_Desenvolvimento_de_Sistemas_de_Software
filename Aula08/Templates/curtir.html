@@ -1,0 +1,9 @@
+<style>{{ checkedtab | safe }}{background-color: #000; color: #FFF;}</style>
+<b>Curtidas: {{ curtidas }} </b>
+<button hx-post="/curtir">
+    Curtir
+</button>
+<button hx-delete="/curtir" hx-confirm="Mensagem de confirmação">
+    Deletar Curtidas
+</button>
+<div hx-trigger="keyup[shiftKey&&altKey&&(key=='p'||key=='P')] from:body" hx-get="/home/jupiter" hx-target="main" hx-push-url="true"></div>
