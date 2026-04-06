@@ -47,7 +47,7 @@ def select_user_by_id(id:int):
 # Saida: usuários com o nome parecido ao passado
 def select_all_users_by_name(name:str,page:int,limit:int):
      with Session(engine) as session:
-        query = select(User).where((User.name).contains(name)).offset(page*limit).limit(limit)
+        query = select(User).where((User.name).like(f"{name}%")).offset(page*limit).limit(limit)
         return session.exec(query).all()
 
 # Busca anotações pelo username
