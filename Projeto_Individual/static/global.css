@@ -240,7 +240,9 @@ body {
 .three-dots:hover>i {
     color: var(--white) !important;
 }
-
+.bg-primary{
+    background-color: var(--background);
+}
 /* input[type="checkbox"] + label:before {
     content: "\1F5A4";
     color:black;
@@ -317,9 +319,6 @@ textarea {
     position: fixed;
     top: 0;
     z-index: 100;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
 }
 #indicator{
     width: 15vh;
@@ -327,4 +326,8 @@ textarea {
 }
 #indicator path{
     fill:var(--accent);
+}
+.underlay{
+    z-index: -1;
+    position: absolute;
 }

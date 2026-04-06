@@ -8,8 +8,8 @@
   <link rel="stylesheet" href="../../static/post.css" />
 </head>
 
-<div class="overlay flex flex-col justify-center align-center flex-grow"></div>
-  {% extends "navbar.html" %}
+<div class="overlay flex flex-col justify-center align-center "></div>
+{% extends "navbar.html" %}
   {% block main %}
   <div class="book flex flex-col align-center vw-100 flex-grow">
     
@@ -27,7 +27,7 @@
       {% include "savedBooks.html" with context %}
      
     {% else %}
-      <h1>Adicione seu primeiro livro</h1>
+      <h1 hx-get="" hx-trigger="htmx:afterSwap from:#section-annotation" hx-target="this" hx-swap="delete">Adicione seu primeiro livro</h1>
     {% endfor %}
   </section>
     

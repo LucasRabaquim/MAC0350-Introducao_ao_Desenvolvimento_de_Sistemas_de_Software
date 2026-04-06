@@ -12,8 +12,8 @@ class User(SQLModel, table=True):
     book: List["Book"] = Relationship(back_populates="user")
 
 class Cookies(BaseModel):
-    session_user: str
-    session_password: str
+    session_user: str = ""
+    session_password: str = ""
 
 # Relação Book <-- 1:n --> Anottation
 class Annotation(SQLModel, table=True):

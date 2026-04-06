@@ -9,7 +9,7 @@
     justify-content: center;
     text-align: center;
     height: 100%;
-    width: 10vw;
+    width: 15vw;
     font-size: 1.3rem;
     color: var(--white);
 }
@@ -69,7 +69,8 @@
     border: none;
     background-color: transparent;
     text-align: center;
-    font-size: 1.4rem;
+    font-size: 1.2rem;
+    flex-grow: 1;
 }
 .search-bar:hover{
     border-bottom: 5px solid var(--white);

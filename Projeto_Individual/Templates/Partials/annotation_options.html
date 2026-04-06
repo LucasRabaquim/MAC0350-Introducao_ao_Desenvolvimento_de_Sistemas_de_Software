@@ -1,4 +1,4 @@
-<div id="post-options" class="menu">
+<div id="post-options" class="menu"  onmouseleave="document.querySelector('.menu').remove()"  onclick="document.querySelector('.menu').remove()">
   <button hx-delete="/annotation/{{id}}" hx-target="#annotation-{{id}}" hx-swap="delete" hx-confirm="Deseja apagar esta anotação?">Deletar</button>
   <button hx-get="/update_component/{{id}}" hx-target=".overlay">
     Editar</button>

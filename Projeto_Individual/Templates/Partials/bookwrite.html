@@ -5,6 +5,7 @@
   <link rel="stylesheet" href="../../static/global.css" />
   <link rel="stylesheet" href="../../static/write.css" />
 </head>
+<div class="flex align-center justify-center vw-100 vh-100" id="write-overlay">
 <div class="card flex flex-col justify-between write-card">
   <div class="flex flex-row justify-between w-100">
     <h1>Adicione seu livro</h1>
@@ -19,15 +20,16 @@
   <textarea name="summary" id="summary">{{ book.summary }}</textarea>
 
   <div class="flex flex-row write-options justify-flex-end">
-    <button class="alert" hx-get="" hx-target=".write-card" hx-swap="delete">Cancelar</button>
+    <button class="alert" hx-get="" hx-target="#write-overlay" hx-swap="delete"  hx-trigger="click, keyup[key=='Escape'] from:body">Cancelar</button>
     {% if book.title != "" %}
     <button hx-put="/books/{{ book.id }}" hx-include="#title, #author, #summary, #visibility-setting"
       hx-target="#book-{{book.id}}" hx-swap="outerHTML"
-      hx-on::after-request="if(event.detail.successful) document.querySelector('.write-card').remove()">Atualizar</button>
+      hx-on::after-request="if(event.detail.successful) document.querySelector('#write-overlay').remove()">Atualizar</button>
     {% else %}
     <button hx-post="/books" hx-include="#title, #author, #summary, #visibility-setting" hx-target="#section-annotation"
       hx-swap="afterbegin"
-      hx-on::after-request="if(event.detail.successful) document.querySelector('.write-card').remove()">Enviar</button>
+      hx-on::after-request="if(event.detail.successful) document.querySelector('#write-overlay').remove()">Enviar</button>
     {% endif %}
+  </div>
   </div>
 </div>

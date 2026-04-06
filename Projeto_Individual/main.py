@@ -158,7 +158,17 @@ def select_books_by_username(username:str, user:User):
         query = select(Book).where(Book.user_id == owner.id, Book.public == True).order_by(Book.date.desc())
     with Session(engine) as session:
         return session.exec(query).all()
-    
+
+
+# Verifica se o usuário está logado e envia para a página mais relevante
+@app.get("/")
+async def root(request: Request, response: Response, cookies: Annotated[Cookies, Cookie()]):
+    if(not cookies.session_user or not cookies.session_password):
+        response = RedirectResponse(url="/signin")
+    else:
+        response = RedirectResponse(url="/books")
+    return response
+
 
 ### Requisições voltadas ao usuário
 # Retorna a página de login

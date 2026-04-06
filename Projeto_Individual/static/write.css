@@ -1,6 +1,8 @@
 .write-card{
     width: 80vw !important;
-    height: 40vh;
+    height: 40vh  !important;
+    box-shadow: 0 20px 20px var(--accent) !important;
+    background-color: var(--secondary) !important;
 }
 .write-options > button{
     width: 15vw !important;

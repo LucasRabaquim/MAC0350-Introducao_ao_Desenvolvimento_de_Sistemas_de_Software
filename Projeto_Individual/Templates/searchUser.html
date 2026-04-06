@@ -11,6 +11,7 @@
 
 
 <div id="div-usuarios" class="flex flex-col flex-grow vw-100 align-center justify-around">
+    {% if name != "" %}
     {% for db_user in users %}
     <div class="card post flex-col" id="user-{{ db_user.id }}"
         onClick="window.location.href = '/books/{{ db_user.username }}'">
@@ -33,6 +34,11 @@
             hx-select="#div-usuarios"
             hx-indicator="#indicator">
     </div>
+    {% endif %}
+    {% else %}
+        <div class="flex flex-col flex-grow vw-100 align-center justify-center">
+            <p>Pesquise por um usuário</p>
+        </div>
     {% endif %}
 </div>
 <div class="flex justify-center align-center vw-100 flex-grow">

@@ -51,7 +51,7 @@
   {% include "annotation.html" with context %}
 
   {% else %}
-  <h1>Crie sua primeira anotação</h1>
+  <h1 hx-get="" hx-trigger="htmx:afterSwap from:#section-annotation" hx-target="this" hx-swap="delete">Crie sua primeira anotação</h1>
   {% endfor %}
 </section>
 
