@@ -303,7 +303,6 @@ async def follow(username:str, request: Request, response: Response,cookies: Ann
     else:
         create_follow(user.id,username)
 
-
 ### Requisições voltadas as anotações
 # Retorna página com todos os livros salvos do usuário
 @app.get("/books", tags=["books"],response_class=HTMLResponse)

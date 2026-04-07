@@ -1,4 +1,4 @@
-# Anotobolso
+# Anotobolso Versão 1
 
 O Anotobolso é um sistema para facilitar a criação anotações sobre livros de compartilhá-las:<br>
 Funcionalidades<br>
@@ -6,6 +6,7 @@ Funcionalidades<br>
 * Criação, modificação e deleção de anotações em livros criados pelo usuário
 * Visualizar livros e anotações de outros usuários
 * Configuração de privacidade para livros e anotações
+* Seguir outros usuários
 
 ### Transparência acerca do uso de IA
 * GitHub copilot foi gerado para um rascunho inicial da tela de rascunho, cujo html gerado foi adaptado para criar a classe _card_, utilizada amplamente no site.

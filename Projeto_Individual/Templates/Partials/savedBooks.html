@@ -12,9 +12,10 @@
       <input type="checkbox" name="visibility" id="visibility-setting" disabled {% if book.public %}checked{% endif%} />
       <label for="visibility-setting"></label>
     </span>
-
+  {% if book.user_id == user.id %}
     <button class="three-dots" hx-on:click="event.stopPropagation()"
       hx-get="/book_options_component?id={{ book.id }}"><i class="fas fa-ellipsis-v"></i></button>
+      {% endif %}
   </div>
   <div class="post-text flex flex-col justify-center">
     {{ book.summary }}
